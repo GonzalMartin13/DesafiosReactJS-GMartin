@@ -9,7 +9,7 @@ function App() {
   <div classname="container-fluid">
     <BarraNav/>
     <ITC/>
-    <ItemCount initial={0} cantidad = {5} />
+    <ItemCount initial={0} cantidad = {5} carro={0} />
   </div>
   )
 }

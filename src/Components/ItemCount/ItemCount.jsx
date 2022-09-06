@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
-const ItemCount = ({initial, cantidad}) => {
+const ItemCount = ({initial, cantidad, carro}) => {
+    let CantInit= initial;
     const [inicial, setInicial] = useState(initial);
     const [stock, setStock] = useState(cantidad);
+    const [carrito, setCarrito] = useState(carro);
 
     const Sumar = (valor1, valor2) => {
-        if (valor1 < cantidad){
+        if (valor1 < stock){
             setInicial(valor1 + 1);
             setStock(valor2 -1);
         }
@@ -17,6 +19,12 @@ const ItemCount = ({initial, cantidad}) => {
         }
     }
 
+    const ActualizaCompra = () => {
+        setCarrito(inicial + carrito);
+        setStock(stock - inicial + initial);
+        setInicial(CantInit);
+
+    }
 
     return(
         <div className="text-center ">
@@ -27,7 +35,8 @@ const ItemCount = ({initial, cantidad}) => {
                 <button onClick={() => {Sumar(inicial, stock)}}> + </button>
             </div>
             <p>Cantidad disponible: {stock}</p>
-            <button className="mt-2">Agregar al carrito</button>
+            <button onClick={() => {ActualizaCompra()}} className="mt-2">Agregar al carrito</button>
+            <p>Elementos cargados al carrito: {carrito}</p>
         </div>
     );
 }
