@@ -6,11 +6,15 @@ const ItemCount = ({initial, cantidad, carro}) => {
     const [stock, setStock] = useState(cantidad);
     const [carrito, setCarrito] = useState(carro);
 
+    
+
     const Sumar = (valor1, valor2) => {
-        if (valor1 < stock){
+        if (valor2 === 0){
+            return null;
+        }
             setInicial(valor1 + 1);
             setStock(valor2 -1);
-        }
+        
     }
     const Restar = (valor1, valor2) => {
         if (valor1 > 0 ) {
@@ -21,7 +25,7 @@ const ItemCount = ({initial, cantidad, carro}) => {
 
     const ActualizaCompra = () => {
         setCarrito(inicial + carrito);
-        setStock(stock - inicial + initial);
+        setStock(stock);
         setInicial(CantInit);
 
     }
