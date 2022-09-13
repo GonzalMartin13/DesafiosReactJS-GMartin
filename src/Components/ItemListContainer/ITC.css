@@ -1,4 +1,9 @@
-.FondoMain{
-    background-color: rgb(3, 3, 116);
-    color: whitesmoke
+.Items{
+    border: 5px double whitesmoke;
+    border-radius: 25px;
+    box-shadow: inset;
+}
+
+.imagen{
+    height: 450px;
 }
