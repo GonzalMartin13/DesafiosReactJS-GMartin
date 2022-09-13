@@ -1,0 +1,7 @@
+[
+{ "ID": 13, "curso": "Html + Css", "duracion": "16 Semanas", "precio": 37.500, "IMG": "", "descripcion": "Vas a aprender a desarroyar y diseñar una web" },
+{ "ID": 7, "curso": "Javascript", "duracion": "20 Semanas", "precio": 50.000, "IMG": "", "descripcion": "Vas a poder crear apps que interactuen con el usuario" },
+{ "ID": 20, "curso": "React + NodeJS", "duracion": "16 Semanas", "precio": 32.000, "IMG": "", "descripcion": "Lleva javascript al proximo nivel y covnertite en Front End"},
+{ "ID": 27, "curso": "Carrera BackEnd", "duracion": "24 Semanas", "precio": 60.000, "IMG": "", "descripcion": "Aprende lo basico del BackEnd" }
+]
+
