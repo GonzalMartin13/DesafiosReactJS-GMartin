@@ -9,7 +9,7 @@ function App() {
   return (
     <div classname="container-fluid">
       <BarraNav/>
-      {/* <ITC/> */}
+      <ITC/> 
       <IDC/>
     </div>
   )
