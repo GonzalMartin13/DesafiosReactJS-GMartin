@@ -31,7 +31,7 @@ const ItemCount = ({initial, cantidad, carro}) => {
     }
 
     return(
-        <div className="text-center text-light">
+        <div className="text-center text-dark">
             <p>Suma tus unidades!</p>
             <div>
                 <button onClick={() => {Restar (inicial, stock)}}> - </button>

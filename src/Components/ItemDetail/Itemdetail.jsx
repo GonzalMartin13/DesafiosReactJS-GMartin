@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({item}) => {
     return (
         <div key={item.ID} className="text-center">
-            <img src={item.IMG} alt={item.nombre} />
+            <img src={item.img} alt={item.nombre} />
             <div className="infoDetail">
-                <h2>{item.nombre}</h2>
+                <Link to="/cursos/ID"><h2>{item.nombre}</h2></Link>
                 <p>
                     {item.descripcion} <br/>
                     Duracion: {item.duracion}
