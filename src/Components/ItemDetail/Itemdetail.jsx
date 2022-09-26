@@ -2,12 +2,15 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
+import { useContextoCarro } from "../../Context/CartContext";
 
 const ItemDetail = ({item}) => {
     const [goChango, setGoChango] = useState(false);
+    const {agregarCarro} = useContextoCarro();
 
     const onAdd = () => {
-        setGoChango(true);        
+        setGoChango(true);
+        agregarCarro(item, item.cantidad);      
     }
     return (
             <div key={item.ID} className="text-center">
