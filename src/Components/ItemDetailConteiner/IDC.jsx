@@ -6,19 +6,19 @@ import {prods} from "../productos";
 const IDC = () => {    
     const [product, setProduct] = useState({});
     
-    const {url} = useParams();
-    console.log= (url);
-
+    const {id} = useParams();
+    console.log= ({id});
+    
     const getProduct = (cod) => {
         return new Promise ((res) => {
             setTimeout (() =>{
                 res(prods.find((producto) => producto.ID === cod));
             }, 2000)
         }); }
-    
     useEffect(()=>{
-            getProduct(url).then (data=>{
-                setProduct(data)
+        
+        getProduct(id).then (data=>{
+            setProduct(data)
             })
     }, []);
 

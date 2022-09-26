@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ItemCount = ({initial, cantidad, carro}) => {
+const ItemCount = ({initial, cantidad, carro, onAdd}) => {
     let CantInit= initial;
     const [inicial, setInicial] = useState(initial);
     const [stock, setStock] = useState(cantidad);
@@ -27,6 +27,7 @@ const ItemCount = ({initial, cantidad, carro}) => {
         setCarrito(inicial + carrito);
         setStock(stock);
         setInicial(CantInit);
+        onAdd();
 
     }
 
