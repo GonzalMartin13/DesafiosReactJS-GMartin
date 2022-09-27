@@ -6,6 +6,7 @@ import BarraNav from './Components/Navbar/BarraNav';
 import {Routes, Route} from "react-router-dom";
 import Cart from './Components/Cart/Cart';
 import CartProvider from './Context/CartContext';
+import Item from './Components/item';
 
 
 function App() {
